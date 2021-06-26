@@ -1,16 +1,16 @@
 ![](https://i.imgur.com/D2Ep7aW.png)
 
 # Overview
-This is a mod for [Himeko Sutori](https://himekosutori.com/) that records the names of fallen allies. When an ally is defeated in battle, this mod writes their name, character level, and class into the in-game journal in the "Peoples" category, under a "Fallen Allies" page.
+This is a mod for [Himeko Sutori](https://himekosutori.com/) that records the names of fallen allies. When an ally is defeated in battle, this mod writes their name, character level, and class into the in-game journal under the "Peoples" category and in a "Fallen Allies" page. If permadeath is disabled in your game, then nothing will get recorded.
 
-This mod will save your list of fallen allies directly in your save file.
+This mod will save your list of fallen allies directly to your save file.
 
 # Screenshots
 ![](https://i.imgur.com/0GFggzJ.png)
 ![](https://i.imgur.com/31GpHat.png)
 
 # How do I install this mod?
-All folder paths are relative to your steam folder containing Himeko Sutori. If you're having trouble finding it, right-click on the game in Steam and choosing Manage > Browser Local Files.
+All folder paths are relative to your steam folder containing Himeko Sutori. If you're having trouble finding it, right-click on the game in Steam and choose Manage > Browser Local Files.
 
 To install:
 1. [Download the mod files from the releases page](https://github.com/solimodsthings/FallenAlliesMod/releases)
