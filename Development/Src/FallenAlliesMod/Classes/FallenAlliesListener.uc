@@ -9,12 +9,9 @@
 // directly in save files.
 class FallenAlliesListener extends EventListener;
 
-var EventManager Parent;
-
-function OnInitialization(EventManager Manager)
+DefaultProperties
 {
-    self.Parent = Manager;
-    self.Id = "FallenAllies";
+    Id = "FallenAllies"
 }
 
 function OnPawnDefeated(RPGTacPawn DefeatedPawn, bool IsAlly) 
@@ -26,17 +23,18 @@ function OnPawnDefeated(RPGTacPawn DefeatedPawn, bool IsAlly)
         Entry = GetDefeatedAllyJournalEntry();
         Entry.EntryInfo = Entry.EntryInfo 
             $ DefeatedPawn.CharacterName 
-            $ " (lvl " $ DefeatedPawn.CharacterLevel $ " "
+            $ " (lvl. " $ DefeatedPawn.CharacterLevel $ " "
             $ DefeatedPawn.CharacterClasses[DefeatedPawn.CurrentCharacterClass].ClassName
             $ ")\n";
     }
 }
 
+
 private function RPGTacJournalEntry GetDefeatedAllyJournalEntry()
 {
    local RPGTacJournalEntry Entry;
 
-    foreach Parent.JournalEntries(Entry) 
+    foreach Manager.JournalEntries(Entry) 
     {
         if(Entry.EntryName == "Fallen Allies" && Entry.Category == EJournal_People)
         {
@@ -45,10 +43,11 @@ private function RPGTacJournalEntry GetDefeatedAllyJournalEntry()
     }
 
     // This part only executes if the journal entry doesn't exist yet
-    Entry = Parent.SpawnJournalEntryInstance();
+    Entry = Manager.SpawnJournalEntryInstance();
     Entry.EntryName = "Fallen Allies";
     Entry.Category = EJournal_People;
-    Parent.AddJournalEntry(Entry);
+    //Entry.bSerialize = false;
+    Manager.AddJournalEntry(Entry);
 
     return Entry;
 }
@@ -72,4 +71,5 @@ function Deserialize(JSonObject Data)
 
     Entry = GetDefeatedAllyJournalEntry();
     Entry.EntryInfo = Data.GetStringValue("JournalEntry");
+
 }

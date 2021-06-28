@@ -5,5 +5,4 @@ class FallenAlliesModStart extends EventMutator;
 function OnEventManagerCreated(EventManager Manager)
 {
     Manager.AddListener(new class'FallenAlliesListener');
-    `log("MOD LOADED: Fallen Allies");
 }
