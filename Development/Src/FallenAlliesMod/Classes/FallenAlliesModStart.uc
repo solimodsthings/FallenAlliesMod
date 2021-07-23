@@ -1,8 +1,8 @@
 // [Fallen Allies Mod (2021)]
 
-class FallenAlliesModStart extends EventMutator;
+class FallenAlliesModStart extends ModStart;
 
-function OnEventManagerCreated(EventManager Manager)
+function OnStart(CorePlayerController Core)
 {
-    Manager.AddListener(new class'FallenAlliesListener');
+    Core.AddPlugin(new class'FallenAlliesPlugin');
 }

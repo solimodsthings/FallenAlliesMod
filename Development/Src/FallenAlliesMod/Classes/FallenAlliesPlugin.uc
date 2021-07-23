@@ -6,7 +6,7 @@
 //
 // This mod also ensures the custom journal entry is saved directly in
 // save files.
-class FallenAlliesListener extends EventListener;
+class FallenAlliesPlugin extends Plugin;
 
 var RPGTacJournalEntry CustomEntry;
 
@@ -16,10 +16,10 @@ function OnInitialization()
 {
     if(CustomEntry == none)
     {
-        CustomEntry = Manager.Spawn(class'RPGTacJournalEntry',,,,,,true);
+        CustomEntry = Core.Spawn(class'RPGTacJournalEntry',,,,,,true);
         CustomEntry.EntryName = "Fallen Allies";
         CustomEntry.Category = EJournal_People;
-        Manager.AddJournalEntry(CustomEntry);
+        Core.AddJournalEntry(CustomEntry);
     }
 }
 
@@ -47,7 +47,7 @@ function OnPawnDefeated(RPGTacPawn DefeatedPawn, bool IsAlly)
 // and cause an error if loaded like a normal entry.
 function PreSerialize()
 {
-    Manager.JournalEntries.RemoveItem(CustomEntry);
+    Core.JournalEntries.RemoveItem(CustomEntry);
 }
 
 // Override. Save this mod's custom entry content
@@ -66,7 +66,7 @@ function JSonObject Serialize()
 // back into the main journal entries array.
 function PostSerialize()
 {
-    Manager.AddJournalEntry(CustomEntry);
+    Core.AddJournalEntry(CustomEntry);
 }
 
 // Override. Populate the custom journal entry with content
@@ -82,7 +82,7 @@ private function RPGTacJournalEntry GetCustomEntry()
 {
     local RPGTacJournalEntry Entry;
 
-    foreach Manager.JournalEntries(Entry) 
+    foreach Core.JournalEntries(Entry) 
     {
         if(Entry.EntryName == "Fallen Allies" && Entry.Category == EJournal_People)
         {
