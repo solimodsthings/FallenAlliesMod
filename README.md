@@ -14,15 +14,15 @@ All folder paths are relative to your steam folder containing Himeko Sutori. If 
 
 To install:
 1. [Download the mod files from the releases page](https://github.com/solimodsthings/FallenAlliesMod/releases)
-2.	Place the <i>EventsMod.u</i> and <i>FallenAlliesMod.u</i> files into the script folder of the game at <b>…/Himeko Sutori/RPGTacGame/Script/</b>
+2.	Place the <i>CoreMod.u</i> and <i>FallenAlliesMod.u</i> files into the script folder of the game at <b>…/Himeko Sutori/RPGTacGame/Script/</b>
 3.	Update file <b>…/Himeko Sutori/RPGTacGame/Config/RPGTacMods.ini</b> so the mod is loaded whenever you start the game – the file should look similar to this:
 
 ```
 [rpgtacgame.RPGTacMutatorLoader]
-MutatorsLoaded=EventsMod.EventsModStart,FallenAlliesMod.FallenAlliesModStart
+MutatorsLoaded=CoreMod.CoreStart,FallenAlliesMod.FallenAlliesModStart
 ```
 
 (Note: Make sure there are no spaces in the mod list as whitespaces don’t get trimmed!)
 
 # Mod Dependencies and Compatiblity
-This mod relies on Events Mod and is compatible with other mods that use Events Mod. Please ensure Events Mod is loaded before this mod. 
+This mod relies on [CoreMod](https://github.com/solimodsthings/CoreMod) and is compatible with other mods that use CoreMod. Please ensure CoreMod is loaded before this mod. 
