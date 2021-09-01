@@ -10,19 +10,9 @@ This mod will save your list of fallen allies directly to your save file.
 ![](https://i.imgur.com/31GpHat.png)
 
 # How do I install this mod?
-All folder paths are relative to your steam folder containing Himeko Sutori. If you're having trouble finding it, right-click on the game in Steam and choose Manage > Browser Local Files.
-
-To install:
-1. [Download the mod files from the releases page](https://github.com/solimodsthings/FallenAlliesMod/releases)
-2.	Place the <i>CoreMod.u</i> and <i>FallenAlliesMod.u</i> files into the script folder of the game at <b>…/Himeko Sutori/RPGTacGame/Script/</b>
-3.	Update file <b>…/Himeko Sutori/RPGTacGame/Config/RPGTacMods.ini</b> so the mod is loaded whenever you start the game – the file should look similar to this:
-
-```
-[rpgtacgame.RPGTacMutatorLoader]
-MutatorsLoaded=CoreMod.CoreStart,FallenAlliesMod.FallenAlliesModStart
-```
-
-(Note: Make sure there are no spaces in the mod list as whitespaces don’t get trimmed!)
+1. Subscribe to this mod in the Steam Workshop
+2. Run the ```Mod Loader``` and enable this mod
+3. Hit the ```Apply Changes to Game``` button in ```Mod Loader```
 
 # Mod Dependencies and Compatiblity
 This mod relies on [CoreMod](https://github.com/solimodsthings/CoreMod) and is compatible with other mods that use CoreMod. Please ensure CoreMod is loaded before this mod. 
